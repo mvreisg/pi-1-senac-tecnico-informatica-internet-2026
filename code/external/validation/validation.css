@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(218, 218, 218);
+  padding: 0.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+main.container header.header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  background-color: rgb(66, 76, 211);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+main.container header.header h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+main.container main.body {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  flex-direction: column;
+}
+
+main.container main.body div {
+  background-color: white;
+  border-radius: 0.25rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.container main.body div section.ticket {
+  border-radius: 0.25rem;
+  border-width: 0.25rem;
+  border-color: black;
+  border-style: dashed;
+  font-family: monospace;
+  padding: 1rem;
+  background-color: rgb(217, 228, 120);
+  width: 100%;
+  max-width: 30rem;
+}
+
+main.container main.body div section.ticket header h2 {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+main.container main.body div section.ticket article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+main.container main.body div section.ticket article p span.label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+main.container main.body div section.ticket article p span.value {
+  font-size: 1rem;
+}
+
+main.container main.body div section.ticket article p.total {
+  text-align: right;
+}
+
+main.container main.body div section.ticket article table.items {
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main.container main.body div section.ticket article table.items tr th {
+  padding: 0;
+}
+
+main.container
+  main.body
+  div
+  section.ticket
+  article
+  table.items
+  tr
+  th:nth-child(2) {
+  width: auto;
+}
+
+main.container main.body div section.ticket article table.items tr td {
+  padding: 0;
+}
+
+main.container main.body div section.ticket article button.confirm {
+  appearance: none;
+  border-radius: 0.5rem;
+  border-width: 0;
+  padding: 1rem;
+  flex: 1;
+  background-color: rgb(33, 114, 44);
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+main.container footer.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+main.container footer.footer .copyright {
+  font-size: 0.75rem;
+  font-weight: bold;
+}

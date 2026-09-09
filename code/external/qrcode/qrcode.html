@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirma - Validação</title>
+    <script type="text/javascript" src="./qrcode.min.js"></script>
+    <link rel="stylesheet" href="./qrcode.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        new QRCode(document.getElementById("qrcode"), {
+          width: 400,
+          height: 400,
+        }).makeCode(
+          `${window.location.protocol}${window.location.host}/pi-1/code/external/validation/validation.html`,
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Confirma</h1>
+      </header>
+      <main class="body">
+        <div>
+          <section class="qrcode">
+            <div id="qrcode"></div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <span class="copyright">&copy; Confirma - 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>

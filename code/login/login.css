@@ -1,0 +1,76 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+main.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(94, 150, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.container form {
+  width: 80%;
+  max-width: 420px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+main.container form .titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+main.container form .titles h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main.container form .titles h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+main.container form .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+main.container form .fields label {
+  font-size: 1.25rem;
+}
+
+main.container form .fields input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border-width: 1;
+  border-color: black;
+  padding: 0.5rem;
+}
+
+main.container form button {
+  appearance: none;
+  border-width: 0;
+  background-color: rgb(24, 89, 110);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main.container form button:hover {
+  background-color: rgb(30, 110, 136);
+}
