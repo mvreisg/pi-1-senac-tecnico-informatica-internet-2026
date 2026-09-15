@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confirma - Home</title>
+    <title>Confirma - Validação</title>
     <link rel="stylesheet" href="./../header.css" />
-    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./qrcode.css" />
     <script src="./../../session.js"></script>
+    <script type="text/javascript" src="./qrcode.min.js"></script>
+    <script src="./qrcode.js"></script>
   </head>
   <body>
     <main class="container">
@@ -14,16 +16,23 @@
         <img src="./../../assets/logo.png" alt="Logo do Confirma" />
         <nav class="nav">
           <ul>
-            <li><a href="./home.html">Home</a></li>
+            <li><a href="./../home/home.html">Home</a></li>
             <li><a href="./../orders/orders.html">Pedidos</a></li>
-            <li><a href="./../qrcode/qrcode.html">QR Code</a></li>
+            <li><a href="./qrcode.html">QR Code</a></li>
             <li><a href="./../validation/validation.html">Validação</a></li>
             <li><a href="./../../login/login.html?logoff=true">Sair</a></li>
           </ul>
         </nav>
       </header>
       <main class="body">
-        <div><h2>Bem-vindo!</h2></div>
+        <div>
+          <section class="qrcode">
+            <header>
+              <h2>Escaneie o QR Code pava validar:</h2>
+            </header>
+            <div id="qrcode"></div>
+          </section>
+        </div>
       </main>
       <footer class="footer">
         <span class="copyright">&copy; Confirma - 2026</span>

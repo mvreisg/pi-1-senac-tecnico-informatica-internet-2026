@@ -34,9 +34,8 @@ main.container form .titles h1 {
   font-weight: bold;
 }
 
-main.container form .titles h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
+main.container form .titles img {
+  max-width: 360px;
 }
 
 main.container form .fields {

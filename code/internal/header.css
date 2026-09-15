@@ -1,0 +1,32 @@
+main.container header.header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  background-color: rgb(77, 87, 218);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+main.container header.header h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+main.container header.header img {
+  max-width: 180px;
+}
+
+main.container header.header nav.nav ul {
+  list-style: none;
+  padding-left: 0;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+main.container header.header nav.nav ul li a {
+  text-decoration: none;
+  color: white;
+}
