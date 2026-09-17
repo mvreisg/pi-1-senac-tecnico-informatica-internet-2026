@@ -1,6 +1,5 @@
 body {
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgb(94, 150, 235);
   display: flex;
   justify-content: center;
@@ -28,7 +27,7 @@ body main.container section.content img.logo {
   margin-bottom: 33px;
 }
 
-body main.container section.content article {
+body main.container section.content article.main-article {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -36,14 +35,22 @@ body main.container section.content article {
   margin-bottom: 75px;
 }
 
-body main.container section.content article p {
+body main.container section.content article.main-article article.sub-article {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+body main.container section.content article.main-article p {
   text-align: justify;
 }
 
-body main.container section.content article a {
+body main.container section.content article.main-article a {
   appearance: none;
   border-width: 0;
-  width: 175px;
+  width: 195px;
   height: 61px;
   border-radius: 12px;
   background-color: #1969ff;
@@ -56,7 +63,7 @@ body main.container section.content article a {
   text-decoration: none;
 }
 
-body main.container section.content article a span {
+body main.container section.content article.main-article a span {
   color: white;
   font-size: 16px;
   font-weight: 600;
