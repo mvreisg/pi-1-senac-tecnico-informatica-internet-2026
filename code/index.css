@@ -65,7 +65,7 @@ body main.container section.content article.main-article a button {
   text-decoration: none;
 }
 
-body main.container section.content article.main-article a span {
+body main.container section.content article.main-article a button span {
   color: white;
   font-size: 16px;
   font-weight: 600;
