@@ -46,6 +46,10 @@ body main.container section.content article.main-article p {
 }
 
 body main.container section.content article.main-article a {
+  text-decoration: none;
+}
+
+body main.container section.content article.main-article a button {
   appearance: none;
   border-width: 0;
   width: 200px;
