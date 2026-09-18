@@ -1,3 +1,15 @@
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 body {
   min-height: 100vh;
   background-color: rgb(94, 150, 235);
@@ -12,17 +24,45 @@ body main.container {
   background-color: white;
 }
 
+@media (max-width: 1280px) {
+  body main.container {
+    width: 100vw;
+  }
+}
+
 body main.container section.content {
   width: 100%;
   height: 100%;
   padding: 45px 25px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: stretch;
+}
+
+@media (max-width: 1280px) {
+  body main.container section.content {
+    padding: 20px 12px;
+  }
 }
 
 body main.container section.content img.logo {
-  margin-bottom: 33px;
+  width: 367px;
+  height: 122px;
+}
+
+body main.container section.content img.icon {
+  width: 105px;
+  height: 122px;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  body main.container section.content img.logo {
+    display: none;
+  }
+  body main.container section.content img.icon {
+    display: block;
+  }
 }
 
 body main.container section.content article.main-article {
@@ -30,7 +70,6 @@ body main.container section.content article.main-article {
   flex-direction: column;
   align-items: start;
   gap: 13px;
-  margin-bottom: 75px;
 }
 
 body main.container section.content article.main-article article.sub-article {
@@ -38,7 +77,6 @@ body main.container section.content article.main-article article.sub-article {
   flex-direction: column;
   align-items: start;
   gap: 13px;
-  margin-bottom: 25px;
 }
 
 body main.container section.content article.main-article p {
@@ -52,21 +90,58 @@ body main.container section.content article.main-article a {
 body main.container section.content article.main-article a button {
   appearance: none;
   border-width: 0;
-  width: 200px;
-  height: 61px;
   border-radius: 12px;
   background-color: #1969ff;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 0px 16px;
   cursor: pointer;
   text-decoration: none;
+  width: 180px;
+  height: 40px;
+}
+
+@media (max-width: 1280px) {
+  body main.container section.content article.main-article a button {
+    width: calc(180px * 0.95);
+  }
+}
+
+@media (max-width: 480px) {
+  body main.container section.content article.main-article a button {
+    width: calc(180px * 0.9);
+  }
 }
 
 body main.container section.content article.main-article a button span {
   color: white;
   font-size: 16px;
   font-weight: 600;
+}
+
+body main.container section.content article.main-article a button img {
+  width: 26px;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 1280px) {
+  body main.container section.content article.main-article a button span {
+    font-size: 14px;
+  }
+
+  body main.container section.content article.main-article a button img {
+    width: calc(26px * 0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  body main.container section.content article.main-article a button span {
+    font-size: 12px;
+  }
+
+  body main.container section.content article.main-article a button img {
+    width: calc(26px * 0.5);
+  }
 }
