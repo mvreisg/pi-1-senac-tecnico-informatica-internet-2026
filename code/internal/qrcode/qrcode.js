@@ -6,19 +6,29 @@ if (window.location.protocol.includes("https")) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  new QRCode(document.getElementById("qrcode"), {
-    width: window.innerWidth / 2,
-    height: window.innerWidth / 2,
-  }).makeCode(url);
+  renderQrCode();
 });
 
 window.addEventListener("resize", () => {
+  renderQrCode();
+});
+
+function renderQrCode() {
   const element = document.getElementById("qrcode");
   for (const e of [...element.children]) {
     e.remove();
   }
-  new QRCode(document.getElementById("qrcode"), {
-    width: window.innerWidth / 2,
-    height: window.innerWidth / 2,
+  const WIDTH_LIMIT = 300;
+  let width, height;
+  if (window.innerWidth / 2 < WIDTH_LIMIT) {
+    width = window.innerWidth / 2;
+    height = window.innerWidth / 2;
+  } else {
+    width = WIDTH_LIMIT;
+    height = WIDTH_LIMIT;
+  }
+  new QRCode(element, {
+    width,
+    height,
   }).makeCode(url);
-});
+}
