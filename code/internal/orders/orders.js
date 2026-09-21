@@ -30,6 +30,10 @@ function modifyOrder(data) {
   }
 }
 
+function deleteOrderById(id) {
+  state.orders.values = state.orders.values.filter((v) => v.id !== id);
+}
+
 function createOrderValueTemplate(data) {
   return {
     id: data.id,
@@ -103,7 +107,8 @@ function createOrderElementReceivedActions(data, element) {
     renderOrdersOnContainerElements();
   });
   removeButton.addEventListener("click", () => {
-    document.getElementById(data.id).remove();
+    deleteOrderById(data.id);
+    renderOrdersOnContainerElements();
   });
 }
 
@@ -125,7 +130,8 @@ function createOrderElementInProductionActions(data, element) {
     renderOrdersOnContainerElements();
   });
   removeButton.addEventListener("click", () => {
-    document.getElementById(data.id).remove();
+    deleteOrderById(data.id);
+    renderOrdersOnContainerElements();
   });
 }
 
@@ -147,7 +153,8 @@ function createOrderElementReadyActions(data, element) {
     renderOrdersOnContainerElements();
   });
   removeButton.addEventListener("click", () => {
-    document.getElementById(data.id).remove();
+    deleteOrderById(data.id);
+    renderOrdersOnContainerElements();
   });
 }
 
@@ -169,7 +176,8 @@ function createOrderElementDispatchedActions(data, element) {
     renderOrdersOnContainerElements();
   });
   removeButton.addEventListener("click", () => {
-    document.getElementById(data.id).remove();
+    deleteOrderById(data.id);
+    renderOrdersOnContainerElements();
   });
 }
 
@@ -183,7 +191,8 @@ function createOrderElementDoneActions(data, element) {
   const removeButton = element.querySelector("button.remove.button");
 
   removeButton.addEventListener("click", () => {
-    document.getElementById(data.id).remove();
+    deleteOrderById(data.id);
+    renderOrdersOnContainerElements();
   });
 }
 
