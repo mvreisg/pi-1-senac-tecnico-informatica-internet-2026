@@ -23,6 +23,7 @@ main.container header.header nav.nav ul {
   color: white;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
