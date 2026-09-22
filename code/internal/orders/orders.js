@@ -13,6 +13,7 @@ function createOrder(data) {
       createOrderValueTemplate({
         id: state.orders.id,
         status: data.status,
+        description: data.description,
       }),
     );
   } catch (e) {
@@ -39,20 +40,27 @@ function createOrderValueTemplate(data) {
     id: data.id,
     status: data.status,
     name: `Pedido #${data.id.toString().padStart(10)}`,
+    description: data.description,
   };
 }
 
 function createOrderElement(data) {
-  const { name } = data;
+  const { name, description } = data;
 
   const element = document.createElement("div");
   element.classList.add("card");
   element.id = data.id;
 
   const nameElement = document.createElement("p");
+  nameElement.classList.add("order-title");
   nameElement.textContent = name;
 
+  const descriptionElement = document.createElement("p");
+  descriptionElement.classList.add("order-description");
+  descriptionElement.textContent = description;
+
   element.appendChild(nameElement);
+  element.appendChild(descriptionElement);
   element.appendChild(createOrderElementActions(data));
 
   return element;
@@ -257,14 +265,15 @@ function renderOrdersOnContainerElements() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  for (let i = 0; i < 3; i++) {
-    createOrder({ status: "received" });
-  }
+  createOrder({ status: "received", description: "1 X-Bacon sem tomate" });
 
   renderOrdersOnContainerElements();
 
   document.getElementById("add-new-order").addEventListener("click", () => {
-    createOrder({ status: "received" });
+    const description = document.getElementById(
+      "add-new-order-description",
+    ).value;
+    createOrder({ status: "received", description });
     renderOrdersOnContainerElements();
   });
 });

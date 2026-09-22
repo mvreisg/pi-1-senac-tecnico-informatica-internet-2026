@@ -102,9 +102,14 @@ main.container main.body div section main div.card {
   border-style: solid;
 }
 
-main.container main.body div section main div.card p {
+main.container main.body div section main div.card p.order-title {
   font-size: 1rem;
   font-weight: bold;
+}
+
+main.container main.body div section main div.card p.order-description {
+  font-size: 0.8rem;
+  white-space: pre-line;
 }
 
 main.container main.body div section main div.card div {
@@ -146,6 +151,8 @@ main.container main.body div section main div.card div button.remove {
 
 main.container main.body div section footer {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 1rem;
   border-radius: 0.25rem;
   background-color: rgb(241, 241, 241);
