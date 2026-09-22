@@ -1,10 +1,3 @@
-let url;
-if (window.location.protocol.includes("https")) {
-  url = `https://${window.location.host}/pi-1-senac-tecnico-informatica-internet-2026/code/internal/validation/validation.html`;
-} else {
-  url = `http://${window.location.host}/code/internal/validation/validation.html`;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   renderQrCode();
 });
@@ -27,6 +20,14 @@ function renderQrCode() {
     width = WIDTH_LIMIT;
     height = WIDTH_LIMIT;
   }
+
+  let url;
+  if (window.location.protocol.includes("https")) {
+    url = `https://${window.location.host}/pi-1-senac-tecnico-informatica-internet-2026/code/external/validation/validation.html`;
+  } else {
+    url = `http://${window.location.host}/code/external/validation/validation.html`;
+  }
+
   new QRCode(element, {
     width,
     height,

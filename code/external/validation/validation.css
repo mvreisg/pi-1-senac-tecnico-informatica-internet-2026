@@ -130,6 +130,10 @@ main.container main.body div section.ticket article button.confirm {
   cursor: pointer;
 }
 
+main.container main.body div section.ticket article button.confirm:hover {
+  background-color: rgb(40, 138, 53);
+}
+
 main.container footer.footer {
   display: flex;
   flex-direction: column;

@@ -133,20 +133,40 @@ main.container main.body div section main div.card div button.production {
   background-color: rgb(146, 11, 117);
 }
 
+main.container main.body div section main div.card div button.production:hover {
+  background-color: rgb(163, 11, 130);
+}
+
 main.container main.body div section main div.card div button.ready {
   background-color: rgb(230, 173, 3);
+}
+
+main.container main.body div section main div.card div button.ready:hover {
+  background-color: rgb(245, 188, 16);
 }
 
 main.container main.body div section main div.card div button.dispatch {
   background-color: rgb(53, 53, 184);
 }
 
+main.container main.body div section main div.card div button.dispatch:hover {
+  background-color: rgb(64, 64, 207);
+}
+
 main.container main.body div section main div.card div button.done {
   background-color: rgb(38, 155, 48);
 }
 
+main.container main.body div section main div.card div button.done:hover {
+  background-color: rgb(44, 175, 55);
+}
+
 main.container main.body div section main div.card div button.remove {
   background-color: rgb(161, 49, 49);
+}
+
+main.container main.body div section main div.card div button.remove:hover {
+  background-color: rgb(184, 57, 57);
 }
 
 main.container main.body div section footer {
@@ -170,6 +190,10 @@ main.container main.body div section footer button {
   flex: 1;
   color: white;
   cursor: pointer;
+}
+
+main.container main.body div section footer button:hover {
+  background-color: rgb(160, 160, 160);
 }
 
 main.container footer.footer {

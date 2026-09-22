@@ -39,6 +39,10 @@ main.container form#login-form {
   }
 }
 
+main.container form#login-form a.back-to-landing-page {
+  text-decoration: none;
+}
+
 main.container form#login-form .titles {
   display: flex;
   flex-direction: column;
